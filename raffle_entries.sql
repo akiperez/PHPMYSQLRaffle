@@ -19,6 +19,7 @@ SET time_zone = "+00:00";
 --
 -- Database: `villa_raffle_database`
 --
+CREATE DATABASE IF NOT EXISTS villa_raffle_database;
 
 -- --------------------------------------------------------
 
