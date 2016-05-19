@@ -1,30 +1,5 @@
--- phpMyAdmin SQL Dump
--- version 4.6.1
--- http://www.phpmyadmin.net
---
--- Host: localhost
--- Generation Time: May 19, 2016 at 12:13 PM
--- Server version: 5.7.11
--- PHP Version: 5.5.31
-
-SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET time_zone = "+00:00";
-
-
-/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
-/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
-/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8mb4 */;
-
---
--- Database: `villa_raffle_database`
---
-
--- --------------------------------------------------------
-
---
--- Table structure for table `raffle_entries`
---
+CREATE DATABASE villa_raffle_database; 
+USE villa_raffle_database;
 
 CREATE TABLE `raffle_entries` (
   `raffle_entries_id` int(11) NOT NULL,
@@ -43,9 +18,6 @@ CREATE TABLE `raffle_entries` (
   `tstamp` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
---
--- Dumping data for table `raffle_entries`
---
 
 INSERT INTO `raffle_entries` (`raffle_entries_id`, `firstname`, `lastname`, `address1`, `address2`, `address3`, `city`, `state`, `postalcode`, `telephone`, `email`, `villalocation`, `shoesize`, `tstamp`) VALUES
 (1, 'Tom', 'Tester', '123 Test Rd.', '', '', 'Brooklyn', 'NY', '11207', '(718) 123-1234', 'ttester@test.com', 'Philadelphia', '9', '2016-05-18 23:28:18'),
@@ -65,25 +37,8 @@ INSERT INTO `raffle_entries` (`raffle_entries_id`, `firstname`, `lastname`, `add
 (16, 'Tim', 'Newton', '321 Slick Road', 'Apt 34', '', 'Philadelphia', 'PA', '19111', '(256) 345-4678', 'newtest@newtest.com', 'Philadelphia', '11', '2016-05-19 16:08:01'),
 (17, 'Theo', 'Gray', '321 Slick Road', 'Apt 34', '', 'Philadelphia', 'PA', '19111', '(256) 345-4678', 'theo@newtest.com', 'Philadelphia', '13', '2016-05-19 16:09:15');
 
---
--- Indexes for dumped tables
---
-
---
--- Indexes for table `raffle_entries`
---
 ALTER TABLE `raffle_entries`
   ADD PRIMARY KEY (`raffle_entries_id`);
 
---
--- AUTO_INCREMENT for dumped tables
---
-
---
--- AUTO_INCREMENT for table `raffle_entries`
---
 ALTER TABLE `raffle_entries`
   MODIFY `raffle_entries_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=44;
-/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
-/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
-/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
